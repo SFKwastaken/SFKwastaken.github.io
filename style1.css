@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e; /* Dark Blue background */
+    color: #ffffff; /* White text color */
+}
+
+a {
+    color: #ffa500; /* Orange link color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff; /* White on hover */
+}
+
+/* Header Styles */
+.header {
+    background-color: #16213e; /* Deep Blue background for the header */
+    color: #ffa500; /* Orange text color */
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.icon-box {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-box a {
+    color: #ffa500; /* Orange link color */
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.icon-box:hover {
+    transform: scale(1.1);
+    color: #ffffff; /* White on hover */
+}
+
+.icon-box.active a {
+    color: #ffffff; /* White active link color */
+}
+
+.icon-box i {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #ffa500; /* Orange icons */
+}
+
+.icon-box i:hover {
+    color: #ffffff; /* White icons on hover */
+}
+
+/* Mobile Menu Styles */
+nav[role="navigation"] {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+#menuToggle input {
+    display: none;
+}
+
+#menuToggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 5px;
+    background: #ffa500; /* Orange color for menu toggle */
+    transition: all 0.3s ease;
+}
+
+/* Hide the menu by default */
+#menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #16213e; /* Deep Blue background for mobile menu */
+    padding: 20px;
+    list-style: none;
+}
+
+#menuToggle input:checked ~ #menu {
+    display: block;
+}
+
+#menu li {
+    padding: 10px 0;
+}
+
+#menu li a {
+    color: #ffa500; /* Orange color for mobile menu links */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#menu li a:hover {
+    color: #ffffff; /* White on hover */
+}
+
+/* Title Section Styles */
+.title-section {
+    padding: 50px 0;
+    background-color: #1a1a2e; /* Dark Blue background for the title section */
+    text-align: center;
+    position: relative;
+}
+
+.title-section h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #ffa500; /* Orange title text */
+}
+
+.title-section .title-bg {
+    font-size: 5rem;
+    color: rgba(255, 165, 0, 0.05); /* Faint orange background text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Blog Section Styles */
+.main-content {
+    background-color: #16213e; /* Deep Blue background */
+    padding: 50px 0;
+}
+
+.meta {
+    color: #ffa500; /* Orange text */
+}
+
+.article-title {
+    color: #ffa500; /* Orange color for article title */
+}
+
+.blog-excerpt p {
+    color: #ffffff; /* White text color */
+    line-height: 1.7;
+}
+
+.img-fluid {
+    width: 100%;
+    border: 5px solid #ffa500; /* Orange border around images */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.3); /* Orange shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(255, 165, 0, 0.5); /* Deeper orange shadow on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 0;
+    }
+
+    .icon-box i {
+        font-size: 1.5rem;
+    }
+
+    .title-section h1 {
+        font-size: 2.5rem;
+    }
+}
